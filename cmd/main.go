@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/joho/godotenv"
-	"github.com/joshua468/ecommerce/config"    // Ensure correct import paths
-	migrations"github.com/joshua468/ecommerce/migration" // Ensure correct import paths
-	"github.com/joshua468/ecommerce/routes"     // Ensure correct import paths
+	"github.com/joshua468/ecommerce/config"    
+	migrations"github.com/joshua468/ecommerce/migration" 
+	"github.com/joshua468/ecommerce/routes"     
 	"log"
 )
 
