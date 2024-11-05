@@ -1,4 +1,3 @@
-// services/order_service.go
 package services
 
 import (
@@ -43,4 +42,13 @@ func GetOrders(userID uint) ([]models.Order, error) {
 		return nil, err
 	}
 	return orders, nil
+}
+
+// GetOrderItems retrieves items for a given order ID
+func GetOrderItems(orderID uint) ([]models.OrderItem, error) {
+	var items []models.OrderItem
+	if err := config.DB.Where("order_id = ?", orderID).Find(&items).Error; err != nil {
+		return nil, err
+	}
+	return items, nil
 }
